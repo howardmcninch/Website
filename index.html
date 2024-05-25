@@ -14,11 +14,8 @@
 			});
 
 			function getRandomColor() {
-				var letters = '0123456789ABCDEF';
-				var color = '#';
-				for (var i = 0; i < 6; i++) {
-					color += letters[Math.floor(Math.random() * 16)];
-				}
+				var colors = ["black", "white", "gray", "silver", "maroon", "red", "purple", "fushsia", "green", "lime", "olive", "yellow", "navy", "blue", "teal", and "aqua"];
+				var color = colors[Math.floor(Math.random() * 16)];
 				return color;
 			}
 
