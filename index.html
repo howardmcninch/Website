@@ -9,16 +9,24 @@
 				$('#submit').on('click', function(e) {
 					e.preventDefault();
 				});
+
+				window.setInterval(setRandomColor, 1000);
 			});
-		</script>
-		<style>
-			#firstName {
-				background-color: red;
+
+			function getRandomColor() {
+				var letters = '0123456789ABCDEF';
+				var color = '#';
+				for (var i = 0; i < 6; i++) {
+					color += letters[Math.floor(Math.random() * 16)];
+				}
+				return color;
 			}
 
-			#lastName {
-				background-color: yellow;
+			function setRandomColor() {
+				$("body").css("background-color", getRandomColor());
 			}
+		</script>
+		<style>
 		</style>
 	</head>
 	<body>
