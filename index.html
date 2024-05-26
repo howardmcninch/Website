@@ -17,11 +17,11 @@
 
 			function setRandomColor() {
 				$("body").css("background-color", getRandomColor());
+				displayColor();
 			}
 
 			function displayColor() {
 				var bodyBackgroundColor = $("body").css('background-color');
-				alert(bodyBackgroundColor);
 				$("#color").text(bodyBackgroundColor);
 			}
 		</script>
