@@ -18,10 +18,16 @@
 			function setRandomColor() {
 				$("body").css("background-color", getRandomColor());
 			}
+
+			function displayColor() {
+				var bodyBackgroundColor = $("body").css('background-color');
+				$("#color").text(bodyBackgroundColor);
+			}
 		</script>
 		<style>
 		</style>
 	</head>
 	<body>
+		<p id="color" class="text-center"></p>
 	</body>
 </html>
