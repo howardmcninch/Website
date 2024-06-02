@@ -6,15 +6,14 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 		<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 		<script>
-			$( document ).ready(function() {
-				window.setInterval(setRandomColor, 10000);
+			let colors = ["black", "white", "gray", "silver", "maroon", "red", "purple", "fushsia", "green", "lime", "olive", "yellow", "navy", "blue", "teal", "aqua"];
 
-				window.setTimeout(setRandomColor, 1000);
+			$(document).ready(function() {
+				window.setInterval(setRandomColor, 10000);
 			});
 
 			function getRandomColor() {
-				var colors = ["black", "white", "gray", "silver", "maroon", "red", "purple", "fushsia", "green", "lime", "olive", "yellow", "navy", "blue", "teal", "aqua"];
-				var color = colors[Math.floor(Math.random() * 16)];
+				color = colors[Math.floor(Math.random() * colors.length)];
 				return color;
 			}
 
